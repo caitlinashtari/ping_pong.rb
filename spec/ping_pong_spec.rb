@@ -2,9 +2,12 @@ require('rspec')
 require('ping_pong')
 
 describe('Fixnum#ping_pong') do
-  it('creates a range off the Fixnum its called on')do
-  expect((7).ping_pong()).to(eq(1..7))
- end
+  it('creates an array off the Fixnum its called on')do
+    expect((7).ping_pong()).to(eq([1, 2, 3, 4, 5, 6, 7]))
+  end
+  it('replaces all numbers divilble by 3 with "ping"') do
+    expect((7).ping_pong()).to(eq([1, 2, "ping", 4, 5, "ping", 7]))
+  end
 end
 
 # Plain english specs:
