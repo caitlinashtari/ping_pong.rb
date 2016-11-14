@@ -3,10 +3,13 @@ require('ping_pong')
 
 describe('Fixnum#ping_pong') do
   it('creates an array off the Fixnum its called on')do
-    expect((7).ping_pong()).to(eq([1, 2, 3, 4, 5, 6, 7]))
+    expect((2).ping_pong()).to(eq([1, 2]))
   end
+end
+
+describe('Fixnum#ping_pong') do
   it('replaces all numbers divilble by 3 with "ping"') do
-    expect((7).ping_pong()).to(eq([1, 2, "ping", 4, 5, "ping", 7]))
+    expect((3).ping_pong()).to(eq([1, 2, "ping"]))
   end
 end
 
